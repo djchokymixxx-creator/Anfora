@@ -45,7 +45,7 @@ h1, h2, h3, .dj-name, .section-title {
     max-width: 180px;
     height: auto;
     margin-bottom: 25px;
-    filter: drop-shadow(0 0 10px rgba(255,255,255,0.15));
+    filter: drop-shadow(0 0 12px rgba(255,255,255,0.2));
 }
 
 .profile-container {
@@ -79,45 +79,123 @@ h1, h2, h3, .dj-name, .section-title {
     margin-bottom: 35px;
 }
 
-/* BOTONES DE REDES SOCIALES */
+/* BOTONES DE REDES SOCIALES INTERACTIVOS */
 .social-buttons {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
     width: 100%;
-    max-width: 350px;
+    max-width: 380px;
 }
 
 .social-btn {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 12px;
-    background-color: rgba(20, 20, 20, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    justify-content: space-between;
+    background-color: rgba(18, 18, 18, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     color: #ffffff;
-    padding: 12px 20px;
-    border-radius: 30px;
+    padding: 12px 18px;
+    border-radius: 12px;
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-.social-btn:hover {
-    background-color: #ffffff;
-    color: #0a0a0a;
-    border-color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255,255,255,0.1);
-}
-
-.social-btn i {
+.icon-box {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
     font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
 }
 
-/* SECCIÓN DE EVENTOS */
+.btn-text {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 15px;
+    letter-spacing: 0.5px;
+}
+
+.btn-arrow {
+    color: #777;
+    font-size: 0.85rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Efectos Hover Interactivos por Red Social */
+.social-btn:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.social-btn:hover .btn-arrow {
+    transform: translateX(4px);
+    color: #ffffff;
+}
+
+.social-btn.instagram:hover {
+    background: linear-gradient(135deg, rgba(18,18,18,0.9), rgba(131, 58, 180, 0.3));
+    border-color: #833ab4;
+}
+.social-btn.instagram:hover .icon-box {
+    background-color: #833ab4;
+    color: #fff;
+}
+
+.social-btn.spotify:hover {
+    background: linear-gradient(135deg, rgba(18,18,18,0.9), rgba(30, 215, 96, 0.3));
+    border-color: #1ed760;
+}
+.social-btn.spotify:hover .icon-box {
+    background-color: #1ed760;
+    color: #000;
+}
+
+.social-btn.tiktok:hover {
+    background: linear-gradient(135deg, rgba(18,18,18,0.9), rgba(237, 29, 73, 0.3));
+    border-color: #ed1d49;
+}
+.social-btn.tiktok:hover .icon-box {
+    background-color: #ed1d49;
+    color: #fff;
+}
+
+.social-btn.facebook:hover {
+    background: linear-gradient(135deg, rgba(18,18,18,0.9), rgba(24, 119, 242, 0.3));
+    border-color: #1877f2;
+}
+.social-btn.facebook:hover .icon-box {
+    background-color: #1877f2;
+    color: #fff;
+}
+
+/* SECCIÓN SPOTIFY PLAYER */
+.spotify-section {
+    padding: 70px 20px;
+    background-color: #0c0c0c;
+    border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+.spotify-player-wrapper {
+    max-width: 650px;
+    margin: 0 auto;
+    background: #121212;
+    padding: 15px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* SECCIÓN DE EVENTOS Y FLAYER */
 .events-section {
     padding: 80px 20px;
     background-color: #0f0f0f;
@@ -146,36 +224,32 @@ h1, h2, h3, .dj-name, .section-title {
 .events-grid {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
 }
 
 .event-card {
     display: flex;
     align-items: center;
     background-color: #141414;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 20px;
-    border-radius: 8px;
-    transition: border-color 0.3s ease;
-}
-
-.event-card:hover {
-    border-color: rgba(197, 168, 128, 0.4);
+    border: 1px solid rgba(197, 168, 128, 0.2);
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
 }
 
 .event-date {
     background-color: #1c1c1c;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 6px;
-    padding: 10px 15px;
+    border-radius: 8px;
+    padding: 12px 18px;
     text-align: center;
-    min-width: 70px;
+    min-width: 75px;
     margin-right: 20px;
 }
 
 .event-date .day {
     display: block;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #ffffff;
     font-family: 'Cinzel', serif;
@@ -183,7 +257,7 @@ h1, h2, h3, .dj-name, .section-title {
 
 .event-date .month {
     display: block;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: #c5a880;
     letter-spacing: 1px;
     font-weight: 600;
@@ -194,39 +268,67 @@ h1, h2, h3, .dj-name, .section-title {
 }
 
 .event-info h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #ffffff;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
-.event-location, .event-time {
-    font-size: 0.85rem;
-    color: #999;
-    margin-bottom: 3px;
+.event-location, .event-time, .event-details {
+    font-size: 0.88rem;
+    color: #aaa;
+    margin-bottom: 4px;
 }
 
-.event-location i, .event-time i {
-    margin-right: 5px;
+.event-location i, .event-time i, .event-details i {
+    margin-right: 6px;
     color: #c5a880;
 }
 
-.ticket-btn {
-    background-color: transparent;
+.ticket-btn.active-cover {
+    background-color: rgba(197, 168, 128, 0.1);
     border: 1px solid #c5a880;
     color: #c5a880;
-    padding: 8px 18px;
-    border-radius: 4px;
-    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
     font-size: 0.85rem;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
-    transition: all 0.3s ease;
+    letter-spacing: 1px;
     white-space: nowrap;
 }
 
-.ticket-btn:hover {
-    background-color: #c5a880;
-    color: #0a0a0a;
+/* ESTILOS DEL FLAYER */
+.flyer-container {
+    background-color: #141414;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+.flyer-title {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.flyer-frame {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(197, 168, 128, 0.3);
+    background-color: #0a0a0a;
+}
+
+.event-flyer-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 /* PIE DE PÁGINA */
@@ -253,7 +355,7 @@ footer {
     
     .event-date {
         display: flex;
-        gap: 10px;
+        gap: 12px;
         align-items: center;
         width: 100%;
         justify-content: center;
@@ -264,8 +366,9 @@ footer {
         text-align: center;
     }
 
-    .ticket-btn {
+    .ticket-btn.active-cover {
         display: block;
         width: 100%;
+        text-align: center;
     }
 }
