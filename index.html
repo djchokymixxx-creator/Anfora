@@ -27,60 +27,78 @@
             <h1 class="dj-name">Dj Anfora</h1>
             <p class="dj-subtitle">Electronic Music Producer & DJ</p>
 
-            <!-- BOTONES DE REDES SOCIALES -->
+            <!-- BOTONES DE REDES SOCIALES INTERACTIVOS -->
             <div class="social-buttons">
-                <a href="https://www.instagram.com/anforadj?igsh=MTlmdGQ5MHN3eTVzZQ==" target="_blank" class="social-btn"><i class="fab fa-instagram"></i> Instagram</a>
-                <a href="https://open.spotify.com/artist/0jNbgpL7uXRKXOxDkXTN6r?si=aStbrwlWRTSav3OcIuRnzA&utm_source=copy-link" target="_blank" class="social-btn"><i class="fab fa-spotify"></i> Spotify</a>
-                <a href="https://www.tiktok.com/@anforadjproducer?_r=1&_t=ZS-98VzLCtNctp" target="_blank" class="social-btn"><i class="fab fa-tiktok"></i> TikTok</a>
-                <a href="https://www.facebook.com/share/1CMXKBXPfU/" target="_blank" class="social-btn"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://www.instagram.com/anforadj?igsh=MTlmdGQ5MHN3eTVzZQ==" target="_blank" class="social-btn instagram">
+                    <span class="icon-box"><i class="fab fa-instagram"></i></span>
+                    <span class="btn-text">Instagram</span>
+                    <span class="btn-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="https://open.spotify.com/artist/0jNbgpL7uXRKXOxDkXTN6r?si=aStbrwlWRTSav3OcIuRnzA&utm_source=copy-link" target="_blank" class="social-btn spotify">
+                    <span class="icon-box"><i class="fab fa-spotify"></i></span>
+                    <span class="btn-text">Spotify</span>
+                    <span class="btn-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="https://www.tiktok.com/@anforadjproducer?_r=1&_t=ZS-98VzLCtNctp" target="_blank" class="social-btn tiktok">
+                    <span class="icon-box"><i class="fab fa-tiktok"></i></span>
+                    <span class="btn-text">TikTok</span>
+                    <span class="btn-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="https://www.facebook.com/share/1CMXKBXPfU/" target="_blank" class="social-btn facebook">
+                    <span class="icon-box"><i class="fab fa-facebook"></i></span>
+                    <span class="btn-text">Facebook</span>
+                    <span class="btn-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
             </div>
         </div>
     </header>
+
+    <!-- SECCIÓN DE REPRODUCTOR SPOTIFY -->
+    <section class="spotify-section">
+        <div class="container">
+            <h2 class="section-title">Escucha Mis Beats</h2>
+            <p class="section-desc">Reproduce un adelanto directo desde Spotify.</p>
+            
+            <div class="spotify-player-wrapper">
+                <!-- Reproductor embebido oficial de Spotify -->
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/0jNbgpL7uXRKXOxDkXTN6r?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
 
     <!-- SECCIÓN DE EVENTOS FUTUROS -->
     <section class="events-section">
         <div class="container">
             <h2 class="section-title">Próximos Eventos</h2>
-            <p class="section-desc">Asegura tu lugar en las próximas fechas.</p>
+            <p class="section-desc">No te pierdas mis próximas presentaciones en vivo.</p>
 
             <div class="events-grid">
                 
-                <!-- EVENTO 1 (Plantilla para editar fácilmente) -->
-                <div class="event-card">
+                <!-- EVENTO ACTUALIZADO: La Bubis, Rincón de Guayabitos -->
+                <div class="event-card featured-event">
                     <div class="event-date">
-                        <span class="day">15</span>
+                        <span class="day">08</span>
                         <span class="month">AGO</span>
                     </div>
                     <div class="event-info">
-                        <h3>Nombre del Club / Festival</h3>
-                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Ciudad, País</p>
-                        <p class="event-time"><i class="far fa-clock"></i> 22:00 hrs</p>
+                        <h3>La Bubis</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Rincón de Guayabitos, Nayarit</p>
+                        <p class="event-time"><i class="far fa-clock"></i> Sábado 8 de Agosto</p>
+                        <p class="event-details"><i class="fas fa-ticket-alt"></i> Boletos disponibles directamente en el cover del antro</p>
                     </div>
                     <div class="event-action">
-                        <a href="https://enlace-a-boletos.com" target="_blank" class="ticket-btn">Boletos</a>
+                        <span class="ticket-btn active-cover">En Cover</span>
                     </div>
                 </div>
 
-                <!-- EVENTO 2 -->
-                <div class="event-card">
-                    <div class="event-date">
-                        <span class="day">28</span>
-                        <span class="month">AGO</span>
-                    </div>
-                    <div class="event-info">
-                        <h3>Warehouse Session</h3>
-                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Ciudad, País</p>
-                        <p class="event-time"><i class="far fa-clock"></i> 23:30 hrs</p>
-                    </div>
-                    <div class="event-action">
-                        <a href="#" class="ticket-btn">Próximamente</a>
+                <!-- SECCIÓN DE FLAYER DEL EVENTO -->
+                <div class="flyer-container">
+                    <h3 class="flyer-title">Flyer Oficial</h3>
+                    <div class="flyer-frame">
+                        <!-- Asegúrate de nombrar tu imagen como 'flyer-evento.jpg' -->
+                        <img src="flyer-evento.jpg" alt="Flyer Oficial La Bubis" class="event-flyer-img">
                     </div>
                 </div>
-
-                <!-- 
-                  INSTRUCCIÓN PARA EDITAR:
-                  Si quieres agregar un evento nuevo, solo copia desde <div class="event-card"> hasta </div> y pégalo aquí abajo cambiando los datos.
-                -->
 
             </div>
         </div>
