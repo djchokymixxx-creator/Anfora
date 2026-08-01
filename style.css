@@ -1,0 +1,271 @@
+/* RESET Y ESTILOS GLOBALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0a; /* Fondo negro elegante muy obscuro */
+    color: #e0e0e0; /* Texto gris claro de gran contraste */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+/* TIPOGRAFÍA ELEGANTE PARA TÍTULOS */
+h1, h2, h3, .dj-name, .section-title {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+}
+
+/* SECCIÓN HERO / PORTADA */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.95)), url('tu-foto.jpg') no-repeat center center/cover;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* LOGOTIPO Y FOTO */
+.dj-logo {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.15));
+}
+
+.profile-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #c5a880; /* Detalle dorado sutil y elegante */
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dj-name {
+    font-size: 2.8rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.dj-subtitle {
+    font-size: 1rem;
+    color: #a0a0a0;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+/* BOTONES DE REDES SOCIALES */
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 350px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: rgba(20, 20, 20, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.social-btn:hover {
+    background-color: #ffffff;
+    color: #0a0a0a;
+    border-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.1);
+}
+
+.social-btn i {
+    font-size: 1.2rem;
+}
+
+/* SECCIÓN DE EVENTOS */
+.events-section {
+    padding: 80px 20px;
+    background-color: #0f0f0f;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.section-desc {
+    text-align: center;
+    color: #888;
+    margin-bottom: 40px;
+    font-size: 0.95rem;
+}
+
+.events-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event-card {
+    display: flex;
+    align-items: center;
+    background-color: #141414;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.event-card:hover {
+    border-color: rgba(197, 168, 128, 0.4);
+}
+
+.event-date {
+    background-color: #1c1c1c;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 10px 15px;
+    text-align: center;
+    min-width: 70px;
+    margin-right: 20px;
+}
+
+.event-date .day {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: 'Cinzel', serif;
+}
+
+.event-date .month {
+    display: block;
+    font-size: 0.75rem;
+    color: #c5a880;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.event-info {
+    flex-grow: 1;
+}
+
+.event-info h3 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.event-location, .event-time {
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 3px;
+}
+
+.event-location i, .event-time i {
+    margin-right: 5px;
+    color: #c5a880;
+}
+
+.ticket-btn {
+    background-color: transparent;
+    border: 1px solid #c5a880;
+    color: #c5a880;
+    padding: 8px 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.ticket-btn:hover {
+    background-color: #c5a880;
+    color: #0a0a0a;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #080808;
+    color: #666;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+/* RESPONSIVO PARA MÓVILES */
+@media (max-width: 600px) {
+    .dj-name {
+        font-size: 2.2rem;
+    }
+    
+    .event-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .event-date {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .event-action {
+        width: 100%;
+        text-align: center;
+    }
+
+    .ticket-btn {
+        display: block;
+        width: 100%;
+    }
+}
